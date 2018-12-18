@@ -12,7 +12,7 @@
     "polished": "^2.3.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-emotion": "^9.2.12",
+    "react-emotion": "^10.0.0",
     "react-hot-loader": "^4.3.11",
     "react-icons": "^3.2.1"
   },
