@@ -28,7 +28,7 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "css-loader": "^3.6.0",
     "dotenv-webpack": "^2.0.0",
-    "html-webpack-plugin": "^4.3.0",
+    "html-webpack-plugin": "^5.0.0",
     "html-webpack-template": "^6.2.0",
     "react-refresh": "^0.8.3",
     "to-string-loader": "^1.1.6",
