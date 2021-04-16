@@ -21,5 +21,6 @@ module.exports = {
     semi: ['error', 'never'],
     '@emotion/pkg-renaming': 'error',
     'no-shadow': 'error',
+    'no-extra-semi': 'off',
   },
-};
+}

@@ -1,12 +1,12 @@
-const path = require('path');
-const babelConfig = require('../babel.config.js');
+const path = require('path')
+const babelConfig = require('../babel.config.js')
 
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   babel: () => babelConfig,
   webpackFinal: async (config) => {
-    const cwd = process.cwd();
+    const cwd = process.cwd()
     return {
       ...config,
       resolve: {
@@ -34,6 +34,6 @@ module.exports = {
           ),
         },
       },
-    };
+    }
   },
-};
+}

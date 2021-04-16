@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css } from '@emotion/react'
 
 const globalStyles = css`
   * {
@@ -32,6 +32,6 @@ const globalStyles = css`
     border: 0;
     width: 100%;
   }
-`;
+`
 
-export default globalStyles;
+export default globalStyles
