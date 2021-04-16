@@ -22,4 +22,4 @@ module.exports = {
     '@emotion/pkg-renaming': 'error',
     'no-shadow': 'error',
   },
-};
+}

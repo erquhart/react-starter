@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   presets: [
@@ -17,4 +17,4 @@ module.exports = {
       },
     ],
   ],
-};
+}
