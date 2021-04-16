@@ -1,6 +1,4 @@
 [build]
-  command = 'yarn build'
-  publish = 'dist'
   functions = './functions'
 
 [dev]
@@ -8,3 +6,8 @@
   command = 'yarn start'
   port = 8000
   targetPort = 8080
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

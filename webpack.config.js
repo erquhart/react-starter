@@ -1,27 +1,40 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
-const DotenvWebpackPlugin = require('dotenv-webpack')
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
-const isDevelopment = process.env.NODE_ENV !== 'production'
+const isDevelopment = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: './src/app.js',
+  output: {
+    publicPath: '/',
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        include: [
-          path.resolve(__dirname, 'src'),
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              dimensions: false,
+            },
+          },
         ],
+      },
+      {
+        test: /\.js$/,
+        include: [path.resolve(__dirname, 'src')],
         use: [
           {
             loader: 'babel-loader',
             options: {
-              plugins: [isDevelopment && require.resolve('react-refresh/babel')].filter(Boolean)
-            }
+              plugins: [
+                isDevelopment && require.resolve('react-refresh/babel'),
+              ].filter(Boolean),
+            },
           },
         ],
       },
@@ -40,8 +53,22 @@ module.exports = {
       */
     ],
   },
+  resolve: {
+    alias: {
+      react: require.resolve('react'),
+    },
+  },
+  /**
+   * Uncomment to watch and utilize linked local copies of dependencies.
+  watchOptions: {
+    ignored: /node_modules\/(?!react-virtuoso)/,
+    followSymlinks: true,
+  },
+  */
   plugins: [
-    new DotenvWebpackPlugin(),
+    new webpack.EnvironmentPlugin([
+      // 'ENV_VAR',
+    ]),
     new HtmlWebpackPlugin(),
     isDevelopment && new ReactRefreshWebpackPlugin(),
   ].filter(Boolean),
@@ -51,6 +78,6 @@ module.exports = {
     overlay: true,
     host: '0.0.0.0',
     port: 8080,
-    //historyApiFallback: true,
+    historyApiFallback: true,
   },
-}
+};

@@ -1,4 +1,4 @@
-import { css } from '@emotion/core'
+import { css } from '@emotion/react';
 
 const globalStyles = css`
   * {
@@ -24,7 +24,6 @@ const globalStyles = css`
     &:focus {
       outline: none;
     }
-
   }
 
   input {
@@ -33,6 +32,6 @@ const globalStyles = css`
     border: 0;
     width: 100%;
   }
-`
+`;
 
-export default globalStyles
+export default globalStyles;
