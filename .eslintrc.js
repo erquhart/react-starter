@@ -18,6 +18,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/display-name': 'off',
     quotes: ['warn', 'single'],
+    semi: ['error', 'never'],
     '@emotion/pkg-renaming': 'error',
     'no-shadow': 'error',
   },
