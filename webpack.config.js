@@ -67,7 +67,10 @@ module.exports = {
   */
   plugins: [
     new webpack.EnvironmentPlugin([
-      // 'ENV_VAR',
+      'FIREBASE_DATABASE_URL',
+      'FIREBASE_API_KEY',
+      'FIREBASE_PROJECT_ID',
+      'FIREBASE_SERVICE_ACCOUNT_KEY',
     ]),
     new HtmlWebpackPlugin(),
     isDevelopment && new ReactRefreshWebpackPlugin(),

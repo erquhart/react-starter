@@ -11,26 +11,18 @@ const globalStyles = css`
 
   body,
   input {
-    font-family: 'Inter', sans-serif;
-    letter-spacing: -0.1px;
+    font-family: sans-serif;
   }
 
   input,
   button {
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent;
-
-    &:active,
-    &:focus {
-      outline: none;
-    }
   }
 
   input {
     min-width: 0;
     background: none;
-    border: 0;
-    width: 100%;
   }
 `
 
