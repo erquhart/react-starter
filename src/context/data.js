@@ -26,6 +26,9 @@ const DataProvider = ({ children }) => {
 
   useEffect(() => {
     ;(async () => {
+      if (noData) {
+        return
+      }
       if (!firebase.apps.length) {
         firebase.initializeApp({
           databaseUrl: process.env.FIREBASE_DATABASE_URL,

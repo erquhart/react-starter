@@ -1,6 +1,13 @@
 [build]
   functions = './functions'
 
+# just for dummy values, delete before going live and store env vars in netlify ui
+[build.environment]
+  FIREBASE_DATABASE_URL=""
+  FIREBASE_API_KEY=""
+  FIREBASE_PROJECT_ID=""
+  FIREBASE_SERVICE_ACCOUNT_KEY=""
+
 [dev]
   framework = '#custom'
   command = 'yarn start'
