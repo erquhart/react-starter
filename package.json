@@ -68,7 +68,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "resolutions": {
-    "@storybook/**/unified/vfile": "^4.2.1"
+    "@storybook/**/unified/vfile": "^5.0.0"
   },
   "private": true
 }
